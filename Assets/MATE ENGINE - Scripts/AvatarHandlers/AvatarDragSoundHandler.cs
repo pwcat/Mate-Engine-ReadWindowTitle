@@ -27,11 +27,18 @@ public class AvatarDragSoundHandler : MonoBehaviour
         }
     }
 
+    //void PlaySound(AudioSource audio)
+    //{
+    //    if (!audio) return;
+    //    float low = 1f - maxLowPitchPercent / 100f, high = 1f + maxHighPitchPercent / 100f;
+    //    audio.pitch = Random.Range(low, high);
+    //    audio.Play();
+    //}
     void PlaySound(AudioSource audio)
     {
         if (!audio) return;
-        float low = 1f - maxLowPitchPercent / 100f, high = 1f + maxHighPitchPercent / 100f;
-        audio.pitch = Random.Range(low, high);
+
+        audio.pitch = 1f;
         audio.Play();
     }
 }

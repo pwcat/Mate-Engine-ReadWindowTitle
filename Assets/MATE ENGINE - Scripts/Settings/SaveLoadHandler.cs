@@ -179,7 +179,6 @@ public class SaveLoadHandler : MonoBehaviour
 
         public bool enableLocomotion = false;
 
-
         //ALARM
         [Serializable]
         public class AlarmEntry

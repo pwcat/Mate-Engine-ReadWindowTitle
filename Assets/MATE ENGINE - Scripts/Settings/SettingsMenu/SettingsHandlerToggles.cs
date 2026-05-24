@@ -59,6 +59,8 @@ public class SettingsHandlerToggles : MonoBehaviour
         enableFeedSystemToggle?.onValueChanged.AddListener(OnEnableFeedSystemChanged);
         enableRandomAvatarToggle?.onValueChanged.AddListener(OnEnableRandomAvatarChanged);
         enableLocomotionToggle?.onValueChanged.AddListener(OnEnableLocomotionChanged);
+
+
         LoadSettings();
         ApplySettings();
     }
@@ -129,6 +131,7 @@ public class SettingsHandlerToggles : MonoBehaviour
         enableFeedSystemToggle?.SetIsOnWithoutNotify(SaveLoadHandler.Instance.data.enableFeedSystem);
         enableRandomAvatarToggle?.SetIsOnWithoutNotify(SaveLoadHandler.Instance.data.enableRandomAvatar);
         enableLocomotionToggle?.SetIsOnWithoutNotify(data.enableLocomotion);
+
         ApplySettings();
     }
 
@@ -189,6 +192,7 @@ public class SettingsHandlerToggles : MonoBehaviour
 
         foreach (var loco in Resources.FindObjectsOfTypeAll<AvatarLocomotionController>())
             loco.EnableLocomotion = data.enableLocomotion;
+
 
     }
 
